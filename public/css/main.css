@@ -1,0 +1,11 @@
+.page-link a{
+    font-size: 16pt;
+    color: #144C80 !important;
+    font-weight: bold;
+    text-decoration: none;
+    user-select: none;
+}
+
+.page-link a:hover{
+    color: #397bb9 !important;
+}

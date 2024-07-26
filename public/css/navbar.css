@@ -1,0 +1,48 @@
+
+
+.navbar {
+    background-color:#144C80;
+    background-image: url('/images/22-compressed.png');
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-position: center;
+    height: 100px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.377);
+}
+.logo {
+    height: 70px;
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+    margin-left: -10px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.input {
+    border-radius: 50px
+}
+
+/* Mobile */
+@media only screen and (max-width: 990px) {
+    .logo {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        margin: auto;
+    }
+
+    .custom-bg {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .navbar-nav {
+        margin-bottom: 20px;
+    }
+
+    #filterLanjutan {
+        color: black;
+    }
+}

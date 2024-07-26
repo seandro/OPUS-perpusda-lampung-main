@@ -1,0 +1,116 @@
+:root {
+    --sidebar-width-active : 356px;
+    --sidebar-width-inactive: 64px;
+}
+
+.sidebar {
+    background-color: #144C80;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    height: calc(100vh - 100px);
+    left: 0;
+    width: var(--sidebar-width-inactive);
+    transition: width .3s;
+    position: absolute;
+}
+
+.penengahan {
+    flex: 1;
+}
+
+.sidebar span {
+    text-decoration: none;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 12px;
+    line-height: 30px;
+}
+
+.sidebar .list-item {
+    width: 100%;
+}
+
+
+.sidebar .list-item:hover a {
+    color: #b7c2cc;
+}
+
+.sidebar .list-item a {
+    color: #678096;
+    text-decoration: none;
+    /* background-color: red; */
+    padding-left: 16px;
+    padding: 16px;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+}
+
+.sidebar .list-item.active a {
+    color: white;
+    padding-left: calc(16px - 6px);
+}
+
+.sidebar .list-item.active {
+    border-left:  3px solid white;
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.sidebar .list-item .fas {
+    margin: auto;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+.sidebar span {
+    position: absolute;
+    text-wrap: nowrap;
+    opacity: 0%;
+    display: none;
+    transition: opacity .1s;
+}
+
+.sidebar.active {
+    width: var(--sidebar-width-active);
+}
+
+.sidebar.active span {
+    opacity: 100%;
+    display: inline;
+    transition: opacity .5s;
+}
+
+
+#mainContent.sidebar-active {
+    margin-left: var(--sidebar-width-active);
+}
+#mainContent {
+    margin-left: var(--sidebar-width-inactive);
+    transition: margin-left .3s;
+    padding: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --sidebar-width-active: 100%;
+        --sidebar-width-inactive: 0px;
+    }
+    .sidebar:not(.active){
+        display: none;
+    }
+    .sidebar #menuBtn {
+        display: none;
+    }
+    #mainContent.sidebar-active {
+        margin-left: -3000px;
+        display:none;
+    }
+}

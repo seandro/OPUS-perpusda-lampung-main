@@ -1,0 +1,19 @@
+.header .h4 {
+
+color: #144C80;
+width: 235px;
+height: 30px;
+font-family: 'League Spartan';
+font-style: normal;
+font-size: 32px;
+}
+
+body {
+    background-color:#E8EDF2" ;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    row-gap: 15px;
+}
